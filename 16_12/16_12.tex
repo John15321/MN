@@ -19,6 +19,66 @@
 
 \maketitle
 
+Należy zaprojektować trójkątny kanał przepuszczający odpady chemiczne.
 
+Dla stałej wartości powierzchni przekroju kanału $A$, można napisać funkcję:
+$$
+    A=\frac{wd}{2} \rightarrow d=\frac{2A}{w}
+$$
+
+Parametr $p$ może zostać zapisany jako:
+
+$$
+    p=w+2\sqrt{\left(\frac{w}{2}\right)^{2}+d^{2}}
+$$
+
+Może to zostać wyrażone jako funkcja $w$. Wtedy taka jest funkcja która należy z minimalizować:
+
+$$
+    f(w) = w+2\sqrt{\left(\frac{w}{2}\right)^{2}+\left(\frac{2A}{w}\right)^{2}}
+$$
+
+Zrżnicowana funkcja $f(w)$:
+
+$$
+    f^{\prime}(w)=1+\frac{w^{4}-16A^{2}}{w^{2}\sqrt{w^{4}+16A^{2}}}
+$$
+
+
+$f^{\prime}$ osiąga minimum kiedy wynosi $0$, tak więc:
+
+
+$$
+    f^{\prime}(w)=0
+$$
+$$
+    \frac{w^{4}-16A^{2}}{w^{2}\sqrt{w^{4}+16A^{2}}}=-1
+$$
+
+Z tego otrzymujemy:
+
+$$
+    w^{2}=\frac{4}{\sqrt{3}}A
+$$
+
+Oraz
+
+$$
+    \tan \theta = \frac{d}{\frac{w}{2}}=\frac{\frac{2A}{w}}{\frac{w}{2}}=\frac{4A}{w^{2}}
+$$
+
+\newpage
+
+Ponieważ $\theta$ ma być takie aby parametr był jaknajmniejszy:
+
+$$
+    \theta = \arctan \left(\frac{4A}{\frac{4A}{\sqrt{3}}}\right)=\arctan \sqrt{3}=60^{\circ}
+$$
+
+Tak więc szerokość i wysokość potrzebnego trójkąto to:
+
+$$
+    w=\frac{2\sqrt{A}}{\sqrt[3]{4}}, \ d=\frac{\sqrt{3A}}{\sqrt[3]{4}}, \ \theta=60^{\circ}
+$$
 
 \end{document}
