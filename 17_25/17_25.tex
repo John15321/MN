@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[makeroom]{cancel}
+\usepackage{hyperref}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\title{Zadanie 17.25}
+\author{Jan Bronicki}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+Tabela poniżej pokazuje związek pomiędzy temperaturą (x) oraz lepkością oleju (y). Używamy liniowej regresji aby znaleźć najlepszy fit funkcji, dla danych oraz wartości $r^{2}$.
+\\
+Na początku definiujemy:
+
+$$
+    x = \log(Temperature), \ \ y = \log(Viscosity)
+$$
+
+\begin{center}
+    \begin{tabular}{ c | c c c c}
+        x & 1.426   & 1.97    & 2.1729  & 2.4991  \\
+        \hline
+        y & 0.13033 & -1.0706 & -1.9208 & -3.1249
+    \end{tabular}
+\end{center}
+
+Teraz obliczamy:
+
+$$
+    \sum x_{i} = 8.068, \ \ \sum y_{i} = -5.986
+$$
+
+$$
+    \sum x^{2}_{i} = 16.881, \ \ \sum x_{i}y_{i} = -13.906
+$$
+
+$$
+    \bar{x} = 2.017, \ \ \bar{y} = -1.4965
+$$
+\\
+$$
+    a_{0} = 4.5815, \ \ a_{1} = -3.0134
+$$
+
+
+Dzięki temu otrzymujemy taki oto wynik:
+
+$$
+    \textcolor{red}{Viscosity} = 10^{a_{0}} \cdot Temperature^{a_{1}} = \textcolor{red}{10^{4.5815} \cdot N^{-3.0134}}
+$$
+
+$$
+    S_{t} = 5.699, \ \ S_{r} = 0.13752, \ \ \textcolor{red}{r^{2} = 0.97570}
+$$
+
+
+Wynik lepkości:
+
+$$
+    Viscosity = 10^{4.5815} \cdot N^{-3.0134}
+$$
+
+$$
+    r^{2} = 0.9757
+$$
+
+\end{document}

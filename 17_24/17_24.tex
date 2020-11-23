@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[makeroom]{cancel}
+\usepackage{hyperref}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\title{Zadanie 17.24}
+\author{Jan Bronicki}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+Materiał jest cyklicznie testowany pod kątem wytrzymałości. Wyniki pomiarów podane są w tabeli poniżej, cykle (x) oraz stress (y). Musimy używając regresji wyznaczyć najlepiej pasującą funkcję, dla pomiarów.
+\\
+Na początku definiujemy:
+
+$$
+    x = \log(N), \ \ y = \log(Stress)
+$$
+
+\begin{center}
+    \begin{tabular}{ c | c c c c c c c}
+        x & 0       & 1 & 2       & 3       & 4       & 5       & 6       \\
+        \hline
+        y & 3.04139 & 3 & 2.96614 & 2.90309 & 2.79588 & 2.74036 & 2.62325
+    \end{tabular}
+\end{center}
+
+Teraz obliczamy:
+
+$$
+    \sum x_{i} =21, \ \ \sum y_{i} = 20.07
+$$
+
+$$
+    \sum x^{2}_{i} = 91, \ \ \sum x_{i}y_{i} = 58.266
+$$
+
+$$
+    \bar{x} = 3, \ \ \bar{y} = -0.069427
+$$
+\\
+$$
+    a_{0} = 3.0754, \ \ a_{1} = -0.069427
+$$
+
+
+Dzięki temu otrzymujemy taki oto wynik:
+
+$$
+    \textcolor{red}{Stress} = 10^{a_{0}} \cdot N^{a_{1}} = \textcolor{red}{10^{3.0754} \cdot N^{-0.069427}}
+$$
+
+
+
+\end{document}
